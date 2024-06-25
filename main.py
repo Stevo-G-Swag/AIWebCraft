@@ -19,7 +19,7 @@ logging.basicConfig(
 logger = logging.getLogger(__name__)
 
 # Configure OpenAI API
-openai.api_key = 'sk-proj-OmLte5EKZi6oncGCdwbET3BlbkFJL953HWsgMCmptp7k3jvJ'
+openai.api_key = 'OPENAI_API_KEY'
 
 # Configure Celery and Flask
 template_dir = os.path.abspath(
