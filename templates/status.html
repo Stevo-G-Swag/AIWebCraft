@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Build Status - AI-Powered App Builder</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Build Status</h1>
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('index') }}">Home</a></li>
+                <li><a href="{{ url_for('build') }}">Build New App</a></li>
+                <li><a href="{{ url_for('projects') }}">View Projects</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h2>Current Status: {{ response.state }}</h2>
+        <p>{{ response.status }}</p>
+        {% if response.result %}
+            <h3>Result:</h3>
+            <pre>{{ response.result }}</pre>
+        {% endif %}
+    </main>
+    <footer>
+        <p>&copy; 2024 AI-Powered App Builder</p>
+    </footer>
+</body>
+</html>
